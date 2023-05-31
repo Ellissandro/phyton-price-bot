@@ -28,7 +28,7 @@ async def get_product_details(url):
 
 async def main():
     chat_id = os.getenv("CHAT_ID")
-    url = "https://www.magazineluiza.com.br/panela-de-pressao-panelux-prata-4l-classic/p/144307900/ud/udpp/"
+    url = os.getenv("URL")
     name, price = await get_product_details(url)
 
     if name and price:
